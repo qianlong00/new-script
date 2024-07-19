@@ -48,19 +48,19 @@ def visualize_predictions(inputs, labels, predictions, palette_file, num_samples
             if idx in np.unique(pred_img1):  # Only map colors for present predictions
                 pred_img_color2[pred_img2 == idx] = color
 
-        axs[i][0].imshow(input_img1)
-        axs[i][0].set_title('Input Image1')
-        axs[i][1].imshow(label_img_color1)
-        axs[i][1].set_title('Ground Truth1')
-        axs[i][2].imshow(pred_img_color1)
-        axs[i][2].set_title('Prediction1')  
+        axs[2*i][0].imshow(input_img1)
+        axs[2*i][0].set_title('Input Image1')
+        axs[2*i][1].imshow(label_img_color1)
+        axs[2*i][1].set_title('Ground Truth1')
+        axs[2*i][2].imshow(pred_img_color1)
+        axs[2*i][2].set_title('Prediction1')  
 
-        axs[i+1][0].imshow(input_img2)
-        axs[i+1][0].set_title('Input Image2')
-        axs[i+1][1].imshow(label_img_color2)
-        axs[i+1][1].set_title('Ground Truth2')
-        axs[i+1][2].imshow(pred_img_color2)
-        axs[i+1][2].set_title('Prediction2')  
+        axs[2*i+1][0].imshow(input_img2)
+        axs[2*i+1][0].set_title('Input Image2')
+        axs[2*i+1][1].imshow(label_img_color2)
+        axs[2*i+1][1].set_title('Ground Truth2')
+        axs[2*i+1][2].imshow(pred_img_color2)
+        axs[2*i+1][2].set_title('Prediction2') 
     
     plt.show()
     
